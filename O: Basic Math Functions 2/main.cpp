@@ -4,19 +4,17 @@
 //
 //  Created by Ryan Wong on 1/4/14.
 //  Copyright (c) 2014 rwjhwong. All rights reserved.
-/*  This is a basic C++ program on Mac that uses file input (data.txt) and output (output.txt). This program calculates the number of integers (1 to 100) you have entered in the input file (data.txt) and displays the number of integers, the sum of the integers, the largest integer, the smallest integer, the average of the integers and finally the number of integers above the average. 
+/*  This is a basic C++ program on Mac that uses file input (data.txt) and output (output.txt). This program calculates the number of integers you have entered in the input file (data.txt) and displays the number of integers, the sum of the integers, the largest integer, the smallest integer, the average of the integers and finally the number of integers above the average.
  */
 
 #include <fstream>
 using namespace std;
 int main() {
-    int n, sum, x, max, min,avg,a;
+    int n, sum, x, max= NULL, min = NULL,avg,a;
     ifstream infile("data.txt");
     ofstream outfile ("output.txt");
     n = 0; // for counting
     sum = 0; // for adding
-    min = 100;
-    max = 0;
     avg = 0; // for average
     a = 0; // for number of integers over average
     while (infile>>x) { // x is the integer to be read from the file
